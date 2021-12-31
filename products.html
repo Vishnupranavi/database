@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <title>All products-Shopee</title>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="addToCart.js"></script>
+<div class="header">
+<div class="container">
+<div class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" width="125px">
+    </div>
+    <nav>
+      <ul id ="MenuItems">
+        <li><a href="">Home</a></li>
+          <li><a href="#products">Products</a></li>
+            <li><a href="#footer">About</a></li>
+              <li><a href="index.html">Queries</a></li>
+              </ul>
+              <div class=" cart" id="cart">
+                <div class="title">CART</div><hr/>
+                <div id="title">
+
+                </div>
+            </div>
+      </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <h1  style="z-index = 1">Collect things you Love<br>Build a New Culture!</h1>
+        <p  style="z-index = 1">The most reliable appliance has simplicity and quality,,<br> does what is demanded of it, is economical to use, easy to maintain,<br> and just as easy.</p>
+        <a href="#products" class="btn">Explore now</a>
+      </div>
+    </div>
+    <div class="col-2">
+      <img src="images/front.png">
+    </div>
+  <!-- featured categories -->
+<div class="categories">
+  <div class="row">
+    <div class="col-3">
+      <img src="images/fridge.jpg">
+      </div>
+      <div class="col-3">
+        <img src="images/tv.png">
+        </div>
+        <div class="col-3">
+          <img src="images/micro.png">
+          </div>
+
+  </div>
+
+</div>
+<!-- products -->
+<section id="products">
+<div class="small-container">
+  <div class="row row-2">
+    <h2>Our Products</h2>
+    <select>
+      <option>Default Sorting</option>
+      <option>Sort by Price</option>
+      <option>Sort by Popularity</option>
+      <option>Sort by Sale</option>
+    </select>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-4" id="item1">
+    <img src="images/washingmachine.jpg">
+      <h4>Washing Machine</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.30000</p>
+      <button onclick="addToCart(item1)">Add to Cart</button>
+    </div>
+    <div class="col-4" id="item2">
+    <img src="images/hometh.jpg">
+      <h4>Home Theater</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.6000</p>
+      <button onclick="addToCart(item2)">Add to Cart</button>
+    </div>
+    <div class="col-4" id="item3">
+    <img src="images/ac.jpg">
+      <h4>Air Conditioner</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.40000</p>
+      <button onclick="addToCart(item3)">Add to Cart</button>
+    </div>
+    <div class="col-4"  id="item4">
+    <img src="images/Toaster.jpg">
+      <h4>Toaster</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+      </div>
+      <p>Rs.5000</p>
+      <button onclick="addToCart(item4)">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4" id="item5">
+    <img src="images/radio.png">
+      <h4>Radio</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.5000</p>
+      <button onclick="addToCart(item5)">Add to Cart</button>
+    </div>
+    <div class="col-4" id="item6">
+    <img src="images/hairdryer1.png">
+      <h4>Hair Dryer</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.3000</p>
+      <button onclick="addToCart(item6)">Add to Cart</button>
+    </div>
+    <div class="col-4" id="item7">
+    <img src="images/laptop2.jpg">
+      <h4>Laptop</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.60000</p>
+      <button onclick="addToCart(item7)">Add to Cart</button>
+    </div>
+    <div class="col-4" id="item8">
+    <img src="images/mixie2.png">
+      <h4>Mixer Grinder</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+      </div>
+      <p>Rs.15000</p>
+      <button onclick="addToCart(item8)">Add to Cart</button>
+    </div>
+    <div class="col-4" id="item9">
+    <img src="images/induction2.png">
+      <h4>Induction Stove</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.4000</p>
+      <button onclick="addToCart(item9)">Add to Cart</button>
+    </div>
+    <div class="col-4" id="item10">
+    <img src="images/vaccum2.jpg">
+      <h4>Vaccum Cleaner</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.8000</p>
+      <button onclick="addToCart(item10)">Add to Cart</button>
+    </div>
+    <div class="col-4"  id="item11">
+    <img src="images/coffee.png">
+      <h4>Coffee Maker</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.3000</p>
+      <button onclick="addToCart(item11)">Add to Cart</button>
+    </div>
+    <div class="col-4" id="item12">
+    <img src="images/waterheater.jpg">
+      <h4>Water Heater</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p>Rs.12000</p>
+      <button onclick="addToCart(item12)">Add to Cart</button>
+    </div>
+  <div class="page-btn">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>&#8594;</span>
+  </div>
+</div>
+</section>
+<!-- offer -->
+<div class="offer">
+  <div class="small-container">
+    <div class="row">
+      <div class="col-1" id="offer">
+        <img src="images/wrist.jpg" class="offer-img">
+        <br>
+          <button onclick="addToCart(offer)">Buy Now&#8594;</button>
+      </div>
+
+      <div class="col-2" ><br>
+        <p>Hurry,only available in Shopee</p>
+        <h1>Smart Watch</h1>
+        <small>Smart Watch has features such as calling function which enables you receive a call and disconnect it, you can also send and receive messages through it supported to Android Phones for which you need to download app.</small>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- testimonial -->
+<div class="testimonial">
+  <div class="small-container">
+    <div class="row">
+    <div class="col-3">
+      <i class="fa fa-quote-left"></i>
+      <p>Great service from start to finish mark was very helpful throughout my purchases and I received my items very quickly and I'm very happy with my tv and soundbar I will definitely use Shopee again.</p>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+      </div>
+      <img src="images/model2.jpg">
+      <h3>Ankith</h3>
+    </div>  <div class="col-3">
+      <i class="fa fa-quote-left"></i>
+      <p>I recently purchased some audio equipment, initially a Soundbar and TV bracket then a follow up order for the Subwoofer to add to the system. On both occasions the service and delivery was excellent.</p>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <img src="images/image2.jpg">
+      <h3>Aalya</h3>
+    </div>  <div class="col-3">
+      <i class="fa fa-quote-left"></i>
+      <p>This is our first experience of Shopee. We are very impressed by the customer care and service and that we received our new Sebo Pet within 24 hours of ordering.I will surely Recommend Shopee.</p>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <img src="images/model3.jpg">
+      <h3>Tharun</h3>
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- brand names -->
+<div class="brands">
+  <div class="small-container">
+    <div class="row">
+      <div class="col-6">
+        <img src="images/philips.png">
+      </div>
+      <div class="col-6">
+        <img src="images/godrej.png">
+      </div>
+      <div class="col-6">
+        <img src="images/lg.png">
+      </div>
+      <div class="col-6">
+        <img src="images/bosch.png">
+      </div>
+      <div class="col-6">
+        <img src="images/samsung1.png">
+      </div>
+      <div class="col-6">
+        <img src="images/ifb1.jpeg">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer -->
+<section id="footer">
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>DOWNLOAD</h3>
+        <p>Download App for Android and ios mobile phone.</p>
+        <div class="app-logo">
+          <img src="images/playstore.png">
+          <img src="images/appstore.png">
+
+        </div>
+      </div>
+      <div class="footer-col-2">
+        <img src="images/shopee2.jpg">
+        <p>Shopee is a platform tailored <br>for the region, providing<br> customers with an easy, secure <br>and fast online shopping <br>experience through strong<br> payment and logistical support.</p>
+      </div>
+      <div class="footer-col-3">
+          <h3>Useful Links</h3>
+          <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return policy</li>
+              <li>Join Affiliate</li>
+          </ul>
+      </div>
+      <div class="footer-col-4">
+          <h3>Contact Us:</h3>
+          <ul>
+              <li>Instagram-shopee_in</li>
+              <li>Facebook-fb_shopee</li>
+              <li>Twitter-shopeee</li>
+              <li>Gmail-shopee@gmail.com</li>
+          </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+<!-- js for toggle -->
+<script>
+  var MenuItems=document.getElementById("MenuItems");
+  MenuItems.style.maxHeight="0px";
+  function menutoggle(){
+    if(MenuItems.style.maxHeight=="0px"){
+      MenuItems.style.maxHeight="200px";
+    }else{
+      MenuItems.style.maxHeight="0px";
+    }
+  }
+</script>
+</body>
+    </html>

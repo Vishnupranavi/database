@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="video">
+       <source src="images/vid.mp4">
+    </video>
+    <div class="login-content-right">
+      <form class="login-form" id="login-form" action="/" method="GET">
+         <h1>Login to E-shopee.</h1>
+
+        <div class="login-form-validation">
+          <input class="login-input" id="login-name" type="text" name="name" placeholder="Enter your name">
+          <p>Error Mesage</p>
+        </div>
+
+        <div class="login-form-validation">
+          <input class="login-input" id="login-email" type="email" name="email" placeholder="Enter your email">
+          <p>Error Mesage</p>
+        </div>
+
+        <div class="login-form-validation">
+          <input class="login-input" id="login-password" type="password" name="password" placeholder="Enter your password">
+          <p>Error Mesage</p>
+        </div>
+
+        <input class="login-input-btn" type="submit" formaction="/" value="Login">
+        <span class="modal-input-login">New user? <a href="signin.html">Register</a> </span>
+
+      </form>
+    </div>
+
+    <!-- <section id="register">
+      <div class="modal-content-right">
+      <form class="modal-form" id="form" action="sign-in.html" method="POST">
+        <h1>Get Started with us! Create your account.</h1>
+
+        <div class="form-validation">
+          <input class="modal-input" id="name" type="text" name="name" placeholder="Enter your name">
+          <p>Error Mesage</p>
+        </div>
+
+        <div class="form-validation">
+          <input class="modal-input" id="email" type="email" name="email" placeholder="Enter your email">
+          <p>Error Mesage</p>
+        </div>
+
+        <div class="form-validation">
+          <input class="modal-input" id="password" type="password" name="password" placeholder="Enter your password">
+          <p>Error Mesage</p>
+        </div>
+
+        <div class="form-validation">
+          <input class="modal-input" id="password-confirm" type="password" name="password" placeholder="confirm your password">
+          <p>Error Mesage</p>
+        </div>
+        <input class="modal-input-btn" type="submit" value="Sign Up">
+        <span class="modal-input-login">Already have an account? Login <a href="">here</a></span>
+
+      </form>
+    </div>
+    </section> -->
+
+
+<style>
+:root{
+  --errorColor: #f00e0e;
+  --validColor: #0add0a;
+  --darkgray: #f08080;
+  --brightred: #4169e1;
+  --lightgray: #b1b1b1;
+  --white: #fff;
+  --lightred: #ff69b4;
+  --lightblue: #add8e6;
+}
+#video{
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   min-width: 100%;
+   min-height: 100%;
+   filter: blur(3px);
+}
+.login-content-right{
+border-radius: 0 3px 3px 0;
+position: relative;
+color: white;
+height: 500px;
+width: 40%;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: rgba(0,0,0,.7);
+}
+.login-form{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 90%;
+height: 90%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.login-form h1{
+font-size: 2rem;
+text-align: start;
+width: 80%;
+margin-bottom: 1rem;
+}
+.login-form-validation{
+margin-bottom: 0.5rem;
+width: 80%;
+}
+.login-form-validation.error{
+margin-bottom: 1.5rem;
+position: relative;
+border: 1px solid var(--errorColor);
+border-radius: 2px;
+}
+.login-form-validation.valid{
+margin-bottom: 0.5rem;
+position: relative;
+border: 1px solid var(--validColor);
+border-radius: 2px;
+}
+.login-form-validation p{
+font-size: 0.7rem;
+margin-top: 0.5rem;
+color: var(--errorColor);
+position: absolute;
+top: 1.8rem;
+display: none;
+}
+
+.login-form-validation.error p{
+display: block;
+}
+
+.login-input{
+display: block;
+padding-left: 0.5rem;
+outline: none;
+border-radius: 2px;
+border: none;
+height: 2rem;
+width: 100%;
+box-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+}
+.login-input::placeholder{
+color: var(--lightgray);
+}
+.login-input-btn {
+width: 80%;
+height: 2rem;
+border-radius: 2px;
+background-color: var(--brightred);
+outline: none;
+border: none;
+color: var(--white);
+font-size: 1rem;
+}
+.login-input-btn:hover{
+cursor: pointer;
+background-color: var(--lightblue);
+transition: all 0.4s ease-out;
+}
+
+
+
+@media screen and (max-width: 768px){
+.login-content-left{
+  display: none;
+}
+.login-content{
+  grid-template-columns: auto;
+  margin: 15% auto;
+  width: 70%;
+  height: 75%;
+}
+}
+
+@media screen and (max-width: 580px){
+.login-content{
+  margin: 20% auto;
+  width: 90%;
+  height: 80%;
+}
+}
+</style>
+
+<script>
+const formLogin = document.getElementById('login-form');
+const nameLogin = document.getElementById('login-name');
+const emailLogin = document.getElementById('login-email');
+const passwordLogin = document.getElementById('login-password');
+
+
+// show error message
+function showErrorLogin(input, message)
+{
+const formValidationLogin = input.parentElement;
+formValidationLogin.className = 'login-form-validation error';
+
+const errorMessageLogin = formValidationLogin.querySelector('p');
+errorMessageLogin.innerText = message;
+}
+
+// show valid
+
+function showValidLogin(input) {
+const formValidationLogin = input.parentElement;
+formValidationLogin.className = 'login-form-validation valid';
+}
+
+// chech checkRequired
+
+function checkRequiredLogin(inputArr){
+inputArr.forEach(function(input){
+  if(input.value.trim() === ''){
+    showErrorLogin(input, `${getFieldNameLogin(input)} is required`);
+  } else{
+    showValidLogin(input);
+    window.location.href = "file:///C:/Users/Apple/Desktop/shopping/products.html";
+  }
+})
+}
+
+// check input length
+
+function checkLengthLogin(input, min, max){
+if(input.value.length < min){
+  showErrorLogin(input, `${getFieldNameLogin(input)} must be atleast ${min} characters`);
+} else if(input.value.length > max){
+  showErrorLogin(input, `${getFieldNameLogin(input)} must be less than ${max} characters`);
+} else {
+  showValidLogin(input);
+}
+}
+
+
+// get getFieldName
+
+function getFieldNameLogin(input){
+return input.name.charAt(0).toUpperCase() + input.name.slice(1);
+}
+
+// event listenrers
+formLogin.addEventListener('submit', (e) => {
+e.preventDefault();
+
+checkRequiredLogin([nameLogin, emailLogin, passwordLogin]);
+checkLengthLogin(name, 3, 30);
+checkLengthLogin(password, 8,25);
+})
+</script>
+
+
+  </body>
+</html>
